@@ -1,0 +1,12 @@
+#!/bin/bash
+
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+BRANCHES_NOT_TO_PUSH_TO=("master" "pilot" "stage" "test" "dev" )
+
+if [[ " ${BRANCHES_NOT_TO_PUSH_TO[@]} " =~ " ${CURRENT_BRANCH} " ]]; then
+  echo "${CURRENT_BRANCH} is not permitted to be pushed to.  Please change your branch to something less abrasive."
+  exit 1
+fi
+
+exit 0
