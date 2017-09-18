@@ -19,7 +19,7 @@ fi
 
 if [ ! -e "$HOME/.gitignore_global" ]; then
   echo "Copying global Git ignore file..." &&
-  ln -s "$(pwd)/.gitignore_global" "$HOME/.giti gnore_global" &&
+  ln -s "$(pwd)/.gitignore_global" "$HOME/.gitignore_global" &&
   git config --global core.excludesfile "$HOME/.gitignore_global"
 fi
 
