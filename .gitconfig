@@ -37,7 +37,5 @@
         fixmc = "!f() { g fetch origin dev && g merge FETCH_HEAD }; f"
 [credential]
 	UseHttpPath = true
-[core]
-	excludesfile = /Users/echansen/.gitignore_global
-[init]
-	templatedir = /Users/echansen/.git_templates
+[user]
+	name = Eric Hansen
